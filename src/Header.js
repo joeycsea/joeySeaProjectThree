@@ -4,9 +4,8 @@ const Header = () => {
    return (
       <div>
          <header>
-            <h1> Life-Goals 🏆</h1>
-            <h2>Where are your dream vacation destinations? What are some things you want to try?</h2>
-            <h3>"My possibilities are endless"</h3>
+            <h1> Life Goals </h1>
+            <h2>what do you dream of accomplishing?</h2>
          </header>
       </div>
    )

@@ -15,12 +15,17 @@ const Goals = (props) => {
 
    return (
       <div>
-         <li key={props.goalData.id} className="goalContainer">
-            <p className="goalText">{props.goalData.goal}</p>
-            <p className="goalDate">{props.goalData.date}</p>
-            <img src={props.goalData.goalImage} alt={props.goalData.goalImageText} />
-            <button onClick={ () => handleRemoveGoal(props.goalData.id) }>Remove Goal</button>
-         </li>
+         <section className="goalContainer" key={props.goalData.id}>
+            <div className="img">
+               <img src={props.goalData.goalImage} alt={props.goalData.goalImageText} />
+            </div>
+            <div className="wordsFlex">
+               <p className="goalText">{props.goalData.goal}</p>
+               <p className="goalDate">{props.goalData.date}</p>
+            </div>
+            
+            <button onClick={ () => handleRemoveGoal(props.goalData.id) }>𝗫</button>
+         </section>
       </div>
    )
 }

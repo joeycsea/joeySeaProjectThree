@@ -61,16 +61,16 @@ const Form = () => {
    };
 
    return (
-      <div>
+      <div classname="formContainer">
          <form action="submit" method="#" className="form">
-            <label htmlFor="newGoal">What do you dream of doing?</label>
+            <label htmlFor="newGoal">I can and I will... </label>
             <input 
                type="text" 
                id="newGoal" 
                onChange={handleInputChange} 
                value={userInput}
             />
-            <button onClick={handleSubmit}>Let's Make It Happen!</button>
+         <button onClick={handleSubmit}>Let's Make It Happen!</button>
          </form>
       </div>
    )

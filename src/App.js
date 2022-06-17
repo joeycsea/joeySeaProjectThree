@@ -6,7 +6,6 @@ import Header from './Header';
 import Form from './Form';
 import Goals from './Goals';
 
-
 function App() {
 
   const [goals, setGoals] = useState([]);
@@ -40,16 +39,22 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <Form />
-      <section>
-        { goals.map((goal) => {
-          console.log(goal);
-            return ( 
-              <Goals goalData={goal} key={goal.id}/>
-            )
-          }) }
-      </section>
+        <Header />
+      <div className="wrapper">
+        <Form />
+        <section>
+          { goals.map((goal) => {
+            console.log(goal);
+              return ( 
+                <Goals goalData={goal} key={goal.id}/>
+              )
+            }) }
+        </section>
+
+        <footer>
+          <p>Created with  by Joey Sea at <a href="https://junocollege.com"> Juno College of Technology</a></p>
+        </footer>
+      </div>
     </div>
   );
 }
