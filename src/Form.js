@@ -70,7 +70,6 @@ const Form = () => {
                onChange={handleInputChange} 
                value={userInput}
             />
-
             <button onClick={handleSubmit}>Let's Make It Happen!</button>
          </form>
       </div>
