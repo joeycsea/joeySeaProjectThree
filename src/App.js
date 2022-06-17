@@ -50,11 +50,10 @@ function App() {
               )
             }) }
         </section>
-
-        <footer>
-          <p>Created with  by Joey Sea at <a href="https://junocollege.com"> Juno College of Technology</a></p>
-        </footer>
       </div>
+        <footer>
+          <p>Created with 🤍 by Joey Sea at <a href="https://junocollege.com"> Juno College of Technology</a></p>
+        </footer>
     </div>
   );
 }

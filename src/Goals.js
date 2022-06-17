@@ -16,7 +16,7 @@ const Goals = (props) => {
    return (
       <div>
          <section className="goalContainer" key={props.goalData.id}>
-            <div className="img">
+            <div>
                <img src={props.goalData.goalImage} alt={props.goalData.goalImageText} />
             </div>
             <div className="wordsFlex">
