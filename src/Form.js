@@ -24,7 +24,7 @@ const Form = () => {
       event.preventDefault();
 
       // Error handling if user input is empty
-      if (userInput == '') {
+      if (userInput === '') {
          alert("Please enter a goal!")
       } else {
          fetchApiData();
@@ -33,7 +33,7 @@ const Form = () => {
 
    // API call to Unsplash API
    const fetchApiData = () => {
-      axios ({
+      axios({
          baseURL: 'https://api.unsplash.com/',
          url: 'search/photos',
          method: "GET",
@@ -42,7 +42,7 @@ const Form = () => {
             client_id: "4JsHPbJdkTLplp8vd_anVo5PB3JaU14uwMZleFvA1f8",
             }
 
-      }) .then ((apiData) => {
+      }).then ((apiData) => {
          
          const goalImage = (apiData.data.results[0].urls.thumb);
          const goalImageText = (apiData.data.results[0].alt_description);
@@ -54,7 +54,7 @@ const Form = () => {
          
          // clear the input
          setUserInput('');
-      }) .catch((error) => {
+      }).catch((error) => {
          console.log(error);
          setUserInput('');
       });
