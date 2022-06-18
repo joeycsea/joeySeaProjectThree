@@ -20,10 +20,10 @@ function App() {
       // Creating a new variable to store the new state
       const newState = [];
       const data = response.val();
-
+      console.log(Object.keys(data).length);
       // Data is an object, so we need to iterate through using a for-in loop to access each goal name and turn it into an array:
         for(let key in data) {
-          newState.push(
+          newState.unshift(
             {
             id: key,
             goal: data[key].goal,
@@ -32,6 +32,7 @@ function App() {
             goalImageText: data[key].goalImageText
             })
         }
+
         setGoals(newState);
     });
   }, []);
@@ -43,16 +44,11 @@ function App() {
       <div className="wrapper">
         <Form />
         <section>
-          { goals.map((goal) => {
-            console.log(goal);
-              return ( 
-                <Goals goalData={goal} key={goal.id}/>
-              )
-            }) }
+          <Goals goalData={goals} />
         </section>
       </div>
         <footer>
-          <p>Created with 🤍 by Joey Sea at <a href="https://junocollege.com"> Juno College of Technology</a></p>
+          <p>Created with 💙 by Joey Sea at <a href="https://junocollege.com"> Juno College of Technology</a></p>
         </footer>
     </div>
   );

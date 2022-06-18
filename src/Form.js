@@ -19,7 +19,7 @@ const Form = () => {
       setUserInput(event.target.value);
    } 
 
-   // This event will handle the user clicking "Let's Make it Happen!" button
+   // This event will handle the user clicking "Let's make it happen!" button
    const handleSubmit = (event) => {
       event.preventDefault();
 
@@ -33,6 +33,10 @@ const Form = () => {
 
    // API call to Unsplash API
    const fetchApiData = () => {
+         
+         const database = getDatabase(firebase);
+         const dbRef = ref(database);
+
       axios({
          baseURL: 'https://api.unsplash.com/',
          url: 'search/photos',
@@ -43,36 +47,38 @@ const Form = () => {
             }
 
       }).then ((apiData) => {
-         
          const goalImage = (apiData.data.results[0].urls.thumb);
          const goalImageText = (apiData.data.results[0].alt_description);
-         const database = getDatabase(firebase);
-         const dbRef = ref(database);
 
-         // Push the value of 'userInput' state and current date to the database
+         // Push the value of 'userInput' state, current date, goal image and goal image text to the database
          push(dbRef, { goal: userInput, date: goalDate, goalImage: goalImage, goalImageText: goalImageText } );
          
          // clear the input
          setUserInput('');
+
       }).catch((error) => {
-         console.log(error);
+         const goalImage = "http://localhost:3000/placeholder.png";
+         const goalImageText = "Placeholder image";
+         push(dbRef, { goal: userInput, date: goalDate, goalImage: goalImage, goalImageText: goalImageText } );
+
          setUserInput('');
       });
    };
 
    return (
       <div className="formContainer">
-         <form action="submit" method="#" className="form">
+         <form action="submit" method="#" className="form" onSubmit={handleSubmit}>
             <label htmlFor="newGoal" >I can and I will... </label>
             <input
-               placeholder="Enter your goal here!"  
+               placeholder="Please enter your goal"  
                type="text" 
-               id="newGoal" 
+               id="newGoal"
+               maxLength="40" 
                onChange={handleInputChange} 
                value={userInput}
             />
          <div>
-            <button onClick={handleSubmit}>Let's Make It Happen!</button>
+            <button>Let's make it happen!</button>
          </div>
          </form>
       </div>
