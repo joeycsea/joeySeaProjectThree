@@ -58,12 +58,11 @@ h2 {
 }
 
 form {
-   font-family: 'Amatic SC', cursive;
    background: #eef3f8;
    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.3);
    padding: 20px;
-   border-radius: 15px;
-   width: 60%;
+   border-radius: 10px;
+   width: 70%;
    margin: 65px auto;
 }
 
@@ -72,7 +71,8 @@ form button {
 }
 
 label {
-   font-size: 2.6rem;
+   font-family: 'Amatic SC', cursive;
+   font-size: 2.5rem;
    font-weight: bold;
    letter-spacing: 2px;
 }
@@ -88,6 +88,7 @@ input {
 button {
    font-family: 'Josefin Sans', sans-serif;
    display: inline-block;
+   font-size: 0.9rem;
    padding: 10px 30px;
    background: #a0c6de;
    border: none;
@@ -106,6 +107,7 @@ button:hover {
 .goalContainer {
    display: flex;
    flex-wrap: wrap;
+   padding-left: 0;
 }
 
 .goalContainer button {
@@ -119,10 +121,10 @@ button:hover {
 .goalItem {
    position: relative;
    background: white;
-   min-height: 180px;
+   min-height: 150px;
    border-radius: 20px;
    padding: 10px;
-   width: 48%;
+   width: 45%;
    box-shadow: 0.3rem 0.3rem 1.2rem rgba(0,0,0,0.3);
    margin: 20px auto;
    list-style: none;
@@ -137,23 +139,23 @@ button:hover {
 }
 
 .goalText {
-   font-size: 2.3rem;
-   font-weight: 700;
    font-family: 'Amatic SC', cursive;
+   font-size: 2rem;
+   font-weight: 700;
    letter-spacing: 2.5px;
    text-align: right;
 }
 
 .goalDate {
-   font-size: 0.9rem;
-   font-family: 'Josefin Sans', sans-serif;
-   padding-top: 15px;
    text-align: right;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 0.8rem;
+   padding-top: 15px;
 }
 
 img {
-   width: 135px;
-   height: 135px;
+   width: 110px;
+   height: 110px;
    display: block;
    object-fit: cover;
    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.3);
@@ -168,4 +170,96 @@ footer {
    padding: 10px 0;
    margin-top: 80px;
    width: 100%;
+}
+
+/* Media Queries */
+@media (max-width: 1060px) {
+   form {
+      width: 90%;
+   }
+}
+
+@media (max-width: 850px) {
+   h1 {
+      font-size: 6rem;
+   }
+
+   h2 {
+      font-size: 1.2rem;
+   }
+
+   input {
+      margin-top: 20px;
+   }
+
+   .goalItem {
+      width: 85%;
+
+   }
+}
+
+@media (max-width: 585px) {
+   h1 {
+      font-size: 4.5rem;
+   }
+
+   h2 {
+      margin-bottom: 0px;
+   }
+
+   label {
+      font-size: 2rem;
+   }
+
+   .goalItem {
+      display: initial;
+      margin: 10px auto;
+   }
+
+   .wordsFlex {
+      margin: 10px;
+      max-width: 100%;
+   }
+   
+   .goalText {
+      text-align: center;
+   }
+
+   img {
+      margin-top: 15px;
+   }
+   
+   footer {
+      font-size: 0.6rem;
+   }
+}
+
+@media (max-width: 385px) {
+   h1 {
+      font-size: 3.75rem;
+   }
+   h2 {
+      font-size: 0.9rem;
+      line-height: 25px;
+   }
+
+   form {
+      margin: 45px auto;
+   }
+
+   form button {
+      margin-top: 15px;
+   }
+
+   label {
+      font-size:1.8rem;
+   }
+
+   input, button {
+      font-size: 0.7rem;
+   }
+
+   .goalText {
+      font-size: 1.8rem;
+   }
 }

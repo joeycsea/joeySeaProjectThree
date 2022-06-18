@@ -50,7 +50,7 @@ const Form = () => {
          const goalImage = (apiData.data.results[0].urls.thumb);
          const goalImageText = (apiData.data.results[0].alt_description);
 
-         // Push the value of 'userInput' state, current date, goal image and goal image text to the database
+         // Push the values of: 'userInput' state, current date, goal image and goal image text to the database
          push(dbRef, { goal: userInput, date: goalDate, goalImage: goalImage, goalImageText: goalImageText } );
          
          // clear the input
