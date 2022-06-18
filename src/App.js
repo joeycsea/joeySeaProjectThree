@@ -20,7 +20,7 @@ function App() {
       // Creating a new variable to store the new state
       const newState = [];
       const data = response.val();
-      console.log(Object.keys(data).length);
+
       // Data is an object, so we need to iterate through using a for-in loop to access each goal name and turn it into an array:
         for(let key in data) {
           newState.unshift(
@@ -48,7 +48,7 @@ function App() {
         </section>
       </div>
         <footer>
-          <p>Created with 💙 by Joey Sea at <a href="https://junocollege.com"> Juno College of Technology</a></p>
+          <p>Created with 💙 by <a href="https://www.joeysea.com/">Joey Sea</a> at <a href="https://junocollege.com"> Juno College of Technology</a></p>
         </footer>
     </div>
   );

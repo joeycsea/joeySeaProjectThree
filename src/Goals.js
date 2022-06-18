@@ -17,7 +17,6 @@ const Goals = (props) => {
          <ul className="goalContainer" >
                {
                   props.goalData.map((goal) => {
-                     console.log(goal);
                      return ( 
                         <li className="goalItem" key={goal.id}  >
                            <div>
