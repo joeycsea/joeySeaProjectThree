@@ -31,9 +31,10 @@ html {
 
 a {
    text-decoration: none;
+   color: black;
 }
 
-body {
+.App {
    background-position: top;
    background-size: cover;
    background-repeat: no-repeat;
@@ -221,12 +222,13 @@ footer {
       max-width: 100%;
    }
    
-   .goalText {
+   .goalText, .goalDate {
       text-align: center;
    }
-
+      
    img {
       margin-top: 15px;
+      margin: 0 auto;
    }
    
    footer {
