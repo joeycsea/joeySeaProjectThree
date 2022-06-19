@@ -200,6 +200,10 @@ footer {
 }
 
 @media (max-width: 585px) {
+   .App {
+      background-size: 100% 100vh;
+   }
+   
    h1 {
       font-size: 4.5rem;
    }
