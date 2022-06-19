@@ -52,7 +52,7 @@ h1 {
 
 h2 {
    font-family: 'Josefin Sans', sans-serif;
-   letter-spacing: 5px;
+   letter-spacing: 8px;
    font-size: 1.5rem;
    margin-top: 10px;
    margin-bottom: 80px;
@@ -227,7 +227,7 @@ footer {
    }
       
    img {
-      margin-top: 15px;
+      margin-top: 20px;
       margin: 0 auto;
    }
    

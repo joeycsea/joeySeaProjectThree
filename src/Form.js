@@ -23,12 +23,7 @@ const Form = () => {
    const handleSubmit = (event) => {
       event.preventDefault();
 
-      // Error handling if user input is empty
-      if (userInput === '') {
-         alert("Please enter a goal!")
-      } else {
-         fetchApiData();
-      }
+      fetchApiData();
    }
 
    // API call to Unsplash API
@@ -70,7 +65,8 @@ const Form = () => {
          <form action="submit" method="#" className="form" onSubmit={handleSubmit}>
             <label htmlFor="newGoal" >I can and I will... </label>
             <input
-               placeholder="Please enter your goal"  
+               placeholder="Please enter your goal"
+               required  
                type="text" 
                id="newGoal"
                maxLength="40" 

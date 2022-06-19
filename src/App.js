@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Header from './Header';
 import Form from './Form';
 import Goals from './Goals';
+import Footer from './Footer';
 
 function App() {
 
@@ -32,7 +33,6 @@ function App() {
             goalImageText: data[key].goalImageText
             })
         }
-
         setGoals(newState);
     });
   }, []);
@@ -47,9 +47,7 @@ function App() {
           <Goals goalData={goals} />
         </section>
       </div>
-        <footer>
-          <p>Created with 💙 by <a href="https://www.joeysea.com/">Joey Sea</a> at <a href="https://junocollege.com"> Juno College of Technology</a></p>
-        </footer>
+      <Footer />
     </div>
   );
 }
