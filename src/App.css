@@ -58,6 +58,27 @@ h2 {
    margin-bottom: 80px;
 }
 
+.lineUp {
+   animation: 3s titleAni ease-in;
+}
+@keyframes titleAni {
+   0% {
+      opacity: 0;
+      transform: translateY(80%);
+   }
+   20% {
+      opacity: 0;
+   }
+   50% {
+      opacity: 1;
+      transform: translateY(0%);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0%);
+   }
+}
+
 form {
    background: #eef3f8;
    box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.3);
@@ -105,6 +126,35 @@ button:hover {
    scale: 1.2;
 }
 
+button {
+   animation: buttonWiggle 2s linear infinite;
+}
+
+/* Keyframes */
+/* https://codepen.io/donovanh/pen/KwEQdQ */
+@keyframes buttonWiggle {
+   0%, 7% {
+      transform: rotateZ(0);
+   }
+   15% {
+      transform: rotateZ(-2deg);
+   }
+   20% {
+      transform: rotateZ(3deg);
+   }
+   25% {
+      transform: rotateZ(-3deg);
+   }
+   30% {
+      transform: rotateZ(3deg);
+   }
+   35% {
+      transform: rotateZ(-2deg);
+   }
+   40%, 100% {
+      transform: rotateZ(0);
+   }
+}
 .goalContainer {
    display: flex;
    flex-wrap: wrap;

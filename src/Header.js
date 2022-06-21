@@ -4,9 +4,9 @@ const Header = () => {
    return (
       <div>
          <header>
-            <h1>#Life-Goals</h1>
+            <h1 className="lineUp">#Life-Goals</h1>
             
-            <h2>what do you dream of accomplishing?</h2>
+            <h2 className="lineUp">what do you dream of accomplishing?</h2>
          </header>
       </div>
    )

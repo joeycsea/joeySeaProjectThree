@@ -53,9 +53,8 @@ const Form = () => {
 
       }).catch((error) => {
          const goalImage = "https://joeysea-project-three.netlify.app/placeholder2.png";
-         // const goalImage = "http://localhost:3000/placeholder2.png";
-
          const goalImageText = "Placeholder image";
+         
          push(dbRef, { goal: userInput, date: goalDate, goalImage: goalImage, goalImageText: goalImageText } );
 
          setUserInput('');
