@@ -237,6 +237,7 @@ footer {
 
    h2 {
       font-size: 1.2rem;
+      line-height: 30px;
    }
 
    input {
@@ -277,22 +278,21 @@ footer {
    }
       
    img {
-      margin-top: 20px;
-      margin: 0 auto;
+      margin: 10px auto;
    }
    
    footer {
-      font-size: 0.6rem;
+      font-size: 0.7rem;
    }
 }
 
 @media (max-width: 385px) {
    h1 {
-      font-size: 3.75rem;
+      font-size: 3.5rem;
    }
    h2 {
-      font-size: 0.9rem;
-      line-height: 25px;
+      font-size: 1rem;
+      /* padding: 0 10px; */
    }
 
    form {

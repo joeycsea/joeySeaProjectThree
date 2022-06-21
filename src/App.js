@@ -40,8 +40,8 @@ function App() {
 
   return (
     <div className="App">
-        <Header />
       <div className="wrapper">
+        <Header />
         <Form />
         <section>
           <Goals goalData={goals} />
