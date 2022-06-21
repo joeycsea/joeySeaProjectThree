@@ -5,7 +5,7 @@ import axios from 'axios';
 import { getDatabase, ref, push } from 'firebase/database';
 
 const Form = () => {
-
+   // user input state
    const [userInput, setUserInput] = useState('');
 
    // date variables
@@ -13,18 +13,20 @@ const Form = () => {
    const dateFormat = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
    const goalDate = date.toLocaleDateString(undefined, dateFormat);
 
+
    // This event will handle when user types in the input box
    const handleInputChange = (event) => {
       // Equal to whatever is currently the value of the input field
       setUserInput(event.target.value);
-   } 
+   };
 
-   // This event will handle the user clicking "Let's make it happen!" button
+   // This event will handle the user clicks "Let's make it happen!" button
    const handleSubmit = (event) => {
       event.preventDefault();
 
       fetchApiData();
-   }
+  
+   };
 
    // API call to Unsplash API
    const fetchApiData = () => {
@@ -66,8 +68,8 @@ const Form = () => {
          <form action="submit" method="#" className="form" onSubmit={handleSubmit}>
             <label htmlFor="newGoal" >I can and I will... </label>
             <input
-               placeholder="Please enter your goal"
-               required  
+               placeholder="Please enter your goal 🏆"
+               required
                type="text" 
                id="newGoal"
                maxLength="40" 

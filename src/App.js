@@ -43,9 +43,7 @@ function App() {
       <div className="wrapper">
         <Header />
         <Form />
-        <section>
-          <Goals goalData={goals} />
-        </section>
+        <Goals goalData={goals} />
       </div>
       <Footer />
     </div>
