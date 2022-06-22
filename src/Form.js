@@ -13,7 +13,6 @@ const Form = () => {
    const dateFormat = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
    const goalDate = date.toLocaleDateString(undefined, dateFormat);
 
-
    // This event will handle when user types in the input box
    const handleInputChange = (event) => {
       // Equal to whatever is currently the value of the input field
@@ -25,7 +24,6 @@ const Form = () => {
       event.preventDefault();
 
       fetchApiData();
-  
    };
 
    // API call to Unsplash API
@@ -54,33 +52,35 @@ const Form = () => {
          setUserInput('');
 
       }).catch((error) => {
-         const goalImage = "https://joeysea-project-three.netlify.app/placeholder2.png";
-         const goalImageText = "Placeholder image";
+         const goalPlaceholderImage = "https://joeysea-project-three.netlify.app/placeholder2.png";
+         const goalPlaceholderImageText = "Placeholder image";
          
-         push(dbRef, { goal: userInput, date: goalDate, goalImage: goalImage, goalImageText: goalImageText } );
+         push(dbRef, { goal: userInput, date: goalDate, goalImage: goalPlaceholderImage, goalImageText: goalPlaceholderImageText });
 
          setUserInput('');
       });
    };
 
    return (
-      <div className="formContainer">
-         <form action="submit" method="#" className="form" onSubmit={handleSubmit}>
-            <label htmlFor="newGoal" >I can and I will... </label>
-            <input
-               placeholder="Please enter your goal 🏆"
-               required
-               type="text" 
-               id="newGoal"
-               maxLength="40" 
-               onChange={handleInputChange} 
-               value={userInput}
-            />
-         <div>
-            <button>Let's make it happen!</button>
+      <section>
+         <div className="formContainer">
+            <form action="submit" method="#" className="form" onSubmit={handleSubmit}>
+               <label htmlFor="newGoal" >I can and I will... </label>
+               <input
+                  placeholder="Enter your goal here 🏆"
+                  required
+                  type="text" 
+                  id="newGoal"
+                  maxLength="40" 
+                  onChange={handleInputChange} 
+                  value={userInput}
+               />
+            <div>
+               <button>Let's make it happen!</button>
+            </div>
+            </form>
          </div>
-         </form>
-      </div>
+      </section>
    )
 }
 
