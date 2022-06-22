@@ -71,7 +71,7 @@ const Form = () => {
                   required
                   type="text" 
                   id="newGoal"
-                  maxLength="40" 
+                  maxLength="60" 
                   onChange={handleInputChange} 
                   value={userInput}
                />
