@@ -3,6 +3,9 @@ import firebase from './firebase';
 import { getDatabase, ref, remove } from 'firebase/database';
 
 const Goals = (props) => {
+
+   const { goalData } = props
+   
    // This function will take an argument, which is the ID of the goal we want to remove
    const handleRemoveGoal = (goalId) => {
 
@@ -12,11 +15,12 @@ const Goals = (props) => {
       remove(dbRef);
    }
 
+
    return (
       <section>
          <ul className="goalContainer" >
             {
-               props.goalData.map((goal) => {
+               goalData.map((goal) => {
                   return ( 
                      <li className="goalItem" key={goal.id}>
                         <div>
