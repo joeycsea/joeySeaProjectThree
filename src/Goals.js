@@ -10,7 +10,7 @@ const Goals = (props) => {
    const handleRemoveGoal = (goalId) => {
 
       const database = getDatabase(firebase);
-      const dbRef = ref(database, `/${goalId}`);
+      const dbRef = ref(database, `/goals/${goalId}`);
       
       remove(dbRef);
    }
