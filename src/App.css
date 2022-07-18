@@ -226,7 +226,7 @@ footer {
    background: #c5d9e9;
    font-size: 0.8rem;
    padding: 10px 0;
-   margin-top: 80px;
+   margin-top: 55vh;
    width: 100%;
 }
 
@@ -262,17 +262,25 @@ footer a:focus {
    }
 }
 
+@media (max-width: 652px) {
+   .buttonFlex {
+      display: flex;
+      flex-direction: column;
+   } button {
+      margin: 10px;
+   }
+   h2 {
+      margin-bottom: 20px;
+   }
+}
+
 @media (max-width: 585px) {
    h1 {
-      font-size: 4.5rem;
-   }
-
-   h2 {
-      margin-bottom: 0px;
+      font-size: 4.3rem;
    }
 
    label {
-      font-size: 2rem;
+      font-size: 1.8rem;
    }
 
    .goalItem {

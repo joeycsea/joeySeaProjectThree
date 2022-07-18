@@ -30,7 +30,8 @@ const Form = () => {
    const fetchApiData = () => {
          
          const database = getDatabase(firebase);
-         const dbRef = ref(database);
+         // nesting the data in "Goals" collection in Firebase
+         const dbRef = ref(database, "/goals");
 
       axios({
          baseURL: 'https://api.unsplash.com/',
@@ -65,7 +66,7 @@ const Form = () => {
       <section>
          <div className="formContainer">
             <form action="submit" method="#" className="form" onSubmit={handleSubmit}>
-               <label htmlFor="newGoal" >I can and I will... </label>
+               <label htmlFor="newGoal" >I CAN and I WILL... </label>
                <input
                   placeholder="Enter your goal here 🏆"
                   required
@@ -77,6 +78,7 @@ const Form = () => {
                />
             <div>
                <button>Let's make it happen!</button>
+               
             </div>
             </form>
          </div>
