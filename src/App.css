@@ -60,6 +60,7 @@ h2 {
    margin-bottom: 80px;
 }
 
+
 .lineUp {
    animation: 3s titleAni ease-in;
 }
@@ -233,6 +234,23 @@ footer {
 footer a:hover,
 footer a:focus {
    color: white;
+}
+
+
+/* Error Page styling */
+.errorSection {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   height: 45vh;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 1.2rem;
+}
+
+.errorSection p {
+   padding-bottom: 50px;
+
 }
 
 /* Media Queries */

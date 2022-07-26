@@ -8,6 +8,7 @@ import Form from './Form';
 import Goals from './Goals';
 import Vacation from './Vacation';
 import VacationForm from './VacationForm';
+import ErrorPage from './ErrorPage';
 import Footer from './Footer';
 
 function App() {
@@ -93,6 +94,8 @@ function App() {
               <Vacation vacationData={vacation} />
             </> }>
           </Route>
+
+          <Route path='/*' element={<ErrorPage/>}/>
         </Routes>
 
       </div>
