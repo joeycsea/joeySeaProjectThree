@@ -66,7 +66,7 @@ const VacationForm = () => {
       <section>
          <div className="formContainer">
             <form action="submit" method="#" className="form" onSubmit={handleSubmit}>
-               <label htmlFor="newVacation">I will travel to... </label>
+               <label htmlFor="newVacation">I WILL travel to... </label>
                <input
                   placeholder="Where to next? ✈️"
                   required
