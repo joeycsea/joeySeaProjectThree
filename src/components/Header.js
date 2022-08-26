@@ -1,5 +1,5 @@
 // Header component
-import{ Link } from 'react-router-dom';
+import{ Link, Outlet } from 'react-router-dom';
 
 const Header = () => {
    return (
@@ -11,7 +11,7 @@ const Header = () => {
          <Link to="/goals"><button>Things I want to do!  🙌 </button></Link>
          <Link to="/vacation"><button>Places I want to go!  🌎 </button></Link>
       </div>
-         
+      <Outlet />
       </header>
    )
 }

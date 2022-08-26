@@ -1,6 +1,6 @@
 // Form component
 import { useState } from 'react';
-import firebase from './firebase';
+import firebase from '../firebase';
 import axios from 'axios';
 import { getDatabase, ref, push } from 'firebase/database';
 
@@ -76,10 +76,9 @@ const Form = () => {
                   onChange={handleInputChange} 
                   value={userInput}
                />
-            <div>
-               <button>Let's make it happen!</button>
-               
-            </div>
+               <div>
+                  <button>Let's make it happen!</button>
+               </div>
             </form>
          </div>
       </section>

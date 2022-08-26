@@ -1,5 +1,5 @@
-import './App.css';
-import firebase from './firebase';
+import '../App.css';
+import firebase from '../firebase';
 import { getDatabase, ref, onValue } from 'firebase/database';
 import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
@@ -75,29 +75,13 @@ function App() {
   return (
     <div className="App">
       <div className="wrapper">
-
         <Routes>
-          <Route path="/" element={  <Header /> } />
-
-          <Route path="/goals" element={ 
-            <>
-              <Header />
-              <Form /> 
-              <Goals goalData={goals} />     
-            </> }>
+          <Route path="/" element={ <Header/> }>
+            <Route path="/goals" element={ <><Form /> <Goals goalData={goals}/></>}/>
+            <Route path="/vacation" element={<><VacationForm /> <Vacation vacationData={vacation}/></>}/>
           </Route>
-
-          <Route path="/vacation" element={
-            <>
-              <Header />
-              <VacationForm />
-              <Vacation vacationData={vacation} />
-            </> }>
-          </Route>
-
-          <Route path='/*' element={<ErrorPage/>}/>
+          <Route path='/*' element={ <ErrorPage/> }/>
         </Routes>
-
       </div>
       <Footer />
     </div>

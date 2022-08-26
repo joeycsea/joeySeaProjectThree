@@ -1,5 +1,5 @@
 // Goals component
-import firebase from './firebase';
+import firebase from '../firebase';
 import { getDatabase, ref, remove } from 'firebase/database';
 
 const Goals = (props) => {

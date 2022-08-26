@@ -1,6 +1,6 @@
 // Vacation Form component
 import { useState } from 'react';
-import firebase from './firebase';
+import firebase from '../firebase';
 import axios from 'axios';
 import { getDatabase, ref, push } from 'firebase/database';
 
